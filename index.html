@@ -1,10 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html class="rubik">
   <head>
     <title>WAI New Design Test page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600|Muli:400,400i,600,600i|Noto+Sans:400,400i,700,700i|PT+Sans:400,400i,700,700i|Quattrocento+Sans:400,400i,700,700i|Raleway:400,400i,600,600i|Rubik:400,400i,700,700i" rel="stylesheet">
     <style>
+
+.skip, .intro, .bread {
+  background-color: #fff;
+}
+
+header {
+  background-color: #036;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+      .inner {
+        max-width: 80%;
+        margin: 0 auto;
+        overflow:hidden;
+      }
+
+      .skip {
+        text-align: right;
+      }
+
+      header a {
+        text-decoration: none;
+      }
+
+      header .main a {
+        border-bottom: 3px solid transparent;
+        padding-bottom:3px;
+      }
+
+      header .main a:hover,
+      header .main a:focus {
+        border-bottom-color: #fff;
+      }
+
+      header .main a[aria-current="page"] {
+        border-bottom-color: #EED009;
+      }
+
+      header>.inner{
+        display:flex;
+        color: #fff;
+        border: 1px solid #21436F;
+        border-width: 0 1px;
+      }
+
+      header>.inner>div{
+        display:flex;
+        flex-direction: column;
+        flex: 3;
+        text-align: right;
+        justify-content: space-between;
+      }
+
+      header h1 {
+        font-weight: normal;
+        font-size: 1.5em;
+        border-right: 1px solid #21436F;
+        color: #fff;
+        padding: .25em;
+      }
+
+      header .main ul {
+        display: flex;
+        text-align:left;
+        justify-content: space-around;
+        margin: 0 0 .5em;
+        padding: 0 20px;
+      }
+
+      header .main ul li {
+        flex: 1;
+        margin-right: 1em;
+      }
+
+      header .main a {
+        display: block;
+        padding: 0 .5em 0 0;
+      }
+
+      header .main .sub {
+        display: block;
+        font-size: .85em;
+      }
+
+      header li {
+        display: inline-block;
+      }
+
+      .meta {
+        text-transform: uppercase;
+        font-size: .85em;
+        letter-spacing: 1px;
+      }
+
+      .meta a,
+      .skip a:first-of-type {
+        margin-right: 2em;
+      }
+
+      .intro {
+        border-bottom: 1px solid #EAEAEA;
+      }
+
+      .meta {
+        border-bottom: 1px solid #21436F;
+      }
+
+      .body .inner {
+        display: flex;
+      }
+
+      .col1 {
+        flex: 3;
+        margin-right: 3em;
+      }
+
+      .col2 {
+        padding-top: 1em;
+        flex: 1;
+      }
+
+      .col2 section {
+        border: 1px solid #E5E5E5;
+        background: #fff;
+        margin-bottom: 1em;
+      }
+
+      .col2 section h3 {
+        margin:0;
+        padding: 3px;
+        font-weight: normal;
+        border-bottom: 1px solid #E5E5E5;
+        font-size: 1.5em;
+        background-color: #F1F1F1;
+      }
+
+      .col2 section .section-body {
+        padding: 3px;
+      }
+
+      .intro {
+        font-size:1.15em;
+      }
+      .intro .inner {
+        position:relative;
+      }
+
+      .bread {
+        padding: 1em 0;
+      }
+
+      .bread a {
+        display:inline-block;
+        margin: 0 .75em;
+      }
+
+      .bread a:first-of-type {
+        margin-left: 0;
+      }
+
+      main footer {
+        background-color: #EFEFEF;
+        font-size: .85em;
+      }
+
+      body>footer {
+        background-color: #3B3B3B;
+        color: #fff;
+        font-size: .95em;
+      }
+
+      body>footer #footerhead {
+        color: #eed009;
+        font-size: 1.5em;
+        margin-top: 0;
+      }
+
+      body>footer .inner {
+        display: flex;
+      }
+
+      body>footer .col {
+        flex:1;
+        padding: 1em 0;
+      }
+
+      body>footer .col:first-child {
+        flex:2;
+      }
+
+      body>footer .col>p:first-child {
+        margin-top; 0 !important;
+      }
+    /**/
       .color1 {color: #1d1d1d;}
       .color2 {color: #036;}
       .color3 {color: #00666F;}
@@ -14,44 +213,205 @@
       .weight2 strong, .weight2 strong em {font-weight: 700;}
       body {
         font-family: 'Rubik', sans-serif;
-        background: #ccc;
+        background: #fafafa;
+        color: #1d1d1d;
+        margin:0;
+        padding: 0;
+        line-height: 1.35;
       }
-      section{
-        background-color: #FAFAFA;
-        border: 1px solid #1d1d1d;
-        min-height: 80vh;
-        width: 80vw;
-        padding: 5vh 5vw;
-        overflow: hidden;
-        margin: 1vh auto 2vh;
-        position: relative;
+      h1, h2 {
+        color: #005A6A;
+        font-weight: normal;
       }
-      .info {
-        background-color: #1d1d1d;
-        color: #fafafa;
-        position:absolute;
+      h2 {
+        border-bottom: 1px solid #EAEAEA;
+      }
+
+      h3 {
+        color: #036;
+      }
+
+      h6 { color: 0.85em; }
+      h5 { color: 1.00em; }
+      h4 { color: 1.10em; }
+      h3 { color: 1.15em; }
+      h2 { color: 1.25em; }
+      h1 { color: 1.50em; }
+
+      .demo_img {
+        width: 160px;
+        height: 160px;
+        margin: 20px;
+        border-radius: 100%;
+        float: left;
+        background-color: #ddd;
+      }
+
+      #font {
+        position:fixed;
         top:0;
-        right: 0;
-        margin: 0;
-        padding: 3px;
-        font-size: 12px;
+        left:0;
       }
     </style>
    </head>
   <body>
-    <section class="color1 weight1">
-      <h1>WAI font tests</h1>
-      <ul>
-        <li>
-          <a href="rubik.html">Rubik (Original Design)</a>
-        </li>
-        <li>
-          <a href="ptsans.html">PT Sans</a>
-        </li>
-        <li>
-          <a href="georgia.html">Georgia</a>
-        </li>
-      </ul>
-    </section>
+    <nav aria-label="Skip" class="skip">
+      <div class="inner">
+        <select name="font" id="font">
+          <option value="" selected>Select Font</option>
+          <option value="sans-serif">System default sans-serif</option>
+          <optgroup label="Alicia">
+            <option value="Rubik">Rubik (original design)</option>
+            <option value="PT Sans">PT Sans</option>
+            <option value="Georgia">Georgia</option>
+          </optgroup>
+          <optgroup label="Adina">
+            <option value="Muli">Muli</option>
+            <option value="Raleway">Raleway</option>
+            <option value="Quattrocento Sans">Quattrocento Sans</option>
+            <option value="Catamaran">Catamaran</option>
+          </optgroup>
+          <optgroup label="Eric">
+            <option value="Noto Sans">Noto Sans</option>
+          </optgroup>
+        </select>
+        <a href="#main">Skip to Content</a>
+        <a href="#">Change Text Size or Colors</a>
+      </div>
+    </nav>
+    <header>
+      <div class="inner">
+        <h1>W3C <br>Web Accessibility<br>Initiative</h1>
+        <div>
+          <nav class="meta" aria-label="Meta">
+            <ul>
+              <li><a href="#">About WAI</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><input type="search"><button>🔍</button></li>
+            </ul>
+          </nav>
+          <nav class="main" aria-label="Main">
+            <ul>
+              <li><a href="#" aria-current="page">Understand <span class="sub">Accessibility</span></a></li>
+              <li><a href="#">Advocate <span class="sub">for Accessibility</span></a></li>
+              <li><a href="#">Evaluate <span class="sub">Accessibility</span></a></li>
+              <li><a href="#">Guidelines <span class="sub">for Accessibility</span></a></li>
+              <li><a href="#">Implement <span class="sub">Accessibility</span></a></li>
+              <li><a href="#">Participate <span class="sub">in WAI</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <nav class="bread" aria-label="Breadcrumb">
+      <div class="inner">
+        <a href="#">Home</a><span>/</span><a href="#" aria-current="page">Primary Navigation Landing Page</a>
+      </div>
+    </nav>
+    <main>
+      <div class="intro">
+        <div class="inner">
+          <div class="demo_img"></div>
+          <h1>Primary Navigation Landing Page (agjJlLiIqbd69)</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quos, aliquid tenetur error numquam exercitationem omnis dolorum dignissimos, excepturi amet nobis fuga accusantium asperiores mollitia, repellendus ut doloribus! Quae, asperiores!</p>
+        </div>
+      </div>
+      <div class="body">
+        <div class="inner">
+          <div class="col1">
+            <h2>Section Header: Header 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, sint dolores tempore quod libero, nemo consequatur neque. Ipsum hic voluptatem cumque, amet neque. Provident fugiat repellat illo culpa qui dolorem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, suscipit odio placeat, ut, eligendi molestias sequi optio non consequatur vel minima cumque praesentium esse voluptates quasi dolores odit quod vitae.</p>
+            <h2>Section Header: Header 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, sint dolores tempore quod libero, nemo consequatur neque. Ipsum hic voluptatem cumque, amet neque. Provident fugiat repellat illo culpa qui dolorem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, suscipit odio placeat, ut, eligendi molestias sequi optio non consequatur vel minima cumque praesentium esse voluptates quasi dolores odit quod vitae.</p>
+            <h3>Section Header: Header 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui eligendi molestias mollitia perspiciatis excepturi. Odit, minima commodi dicta velit exercitationem, impedit amet, similique illum voluptate at sit natus assumenda!</p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, dicta excepturi! Repellat, quos aliquam. Rerum eum aspernatur maiores sapiente autem reiciendis cum, sunt voluptatum aut asperiores corporis soluta libero.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, dicta excepturi! Repellat, quos aliquam. Rerum eum aspernatur maiores sapiente autem reiciendis cum, sunt voluptatum aut asperiores corporis soluta libero.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, dicta excepturi! Repellat, quos aliquam. Rerum eum aspernatur maiores sapiente autem reiciendis cum, sunt voluptatum aut asperiores corporis soluta libero.
+              </li>
+            </ul>
+            <h4>Section Header: Header 4</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo temporibus dolorum maxime eos blanditiis, nihil hic fuga perspiciatis, incidunt praesentium. Alias ut sit vero, dolor illum perferendis magni quaerat, beatae.</p>
+            <h5>Section Header: Header 5</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint inventore natus vitae, reiciendis, omnis, eveniet alias asperiores vero, porro accusamus iure fugiat. Harum architecto sunt, recusandae similique cum veniam ducimus.</p>
+            <h6>Section Header: Header 6</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quis, beatae odio iusto ipsa laboriosam dicta perferendis eos quisquam assumenda natus, autem similique atque, modi pariatur. Suscipit consequuntur similique distinctio!</p>
+          </div>
+          <div class="col2">
+            <section>
+              <h3>Terminology</h3>
+              <div class="section-body">
+                <ul>
+                  <li><a href="#">adaptive strategies</a></li>
+                  <li><a href="#">assistive technologies</a></li>
+                  <li><a href="#">user characteristics</a></li>
+                  <li><a href="#">web content</a></li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h3>More information</h3>
+              <div class="section-body">
+                <ul>
+                  <li><a href="#">Involving Users<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere delectus autem velit distinctio.</a></li>
+                  <li><a href="#">Involving Users<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere delectus autem velit distinctio.</a></li>
+                  <li><a href="#">Involving Users<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere delectus autem velit distinctio.</a></li>
+                  <li><a href="#">Involving Users<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere delectus autem velit distinctio.</a></li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h3>Help improve this page</h3>
+              <div class="section-body">
+                <p>Please share your ideas, suggestions, or comments via email to the publicly-archived list <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a> or via GitHub.</p>
+                <div class="buttons">
+                  <a class="btn" title="Publicly archived list" href="mailto:wai-eo-editors@w3.org?subject=%5bEasy%20Checks%5d">E-mail</a>
+                  <a class="btn" href="https://github.com/w3c/EasyChecks/blob/gh-pages/index.html">Fork &amp; edit on GitHub</a>
+                  <a class="btn" href="https://github.com/w3c/EasyChecks/issues/new?title=[Easy%20Checks]&amp;body=This%20is%20a%20comment%20related%20to%20[Easy%20Checks%20-%20A%20First%20Review%20of%20Web%20Accessibility](https://www.w3.org/WAI/eval/preliminary)">New GitHub Issue</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="inner">
+          <p>Status: Draft updated February 2017</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ipsam quos dolores quasi, maxime harum debitis, optio aperiam voluptatem voluptas asperiores nisi libero, voluptatibus ab error sunt quod assumenda, saepe.</p>
+        </div>
+      </footer>
+    </main>
+    <footer aria-label="footerhead">
+      <div class="inner">
+        <div class="col">
+          <p class="footerhead" id="footerhead">Web Accessibility Initiative</p>
+          <p>Strategies, guidelines, resources to make the web accessible to people with disabilities.</p>
+        </div>
+        <div class="col">
+          <p style="margin-top:0">Give us feedback</p>
+          <p><a href="#">Publicly Archived List</a><br><a href="#">WAI Staff-only List</a></p>
+        </div>
+        <div class="col">
+          <nav><a href="#">Contact WAI</a><br><a href="#">Site Index</a><br><a href="#">Help with the WAI Website</a><br><a href="#">Privacy Statements</a><br></nav>
+        </div>
+      </div>
+      <div class="inner">
+        <p>Copyright © 2017 W3C <sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+<a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>) <a href="/Consortium/Legal/ipr-notice">Usage policies apply</a>.</p>
+      </div>
+    </footer>
+    <script>
+      document.querySelector('#font').addEventListener('change', function(e){
+        document.querySelector('body').style.fontFamily = e.target.value;
+      });
+    </script>
   </body>
  </html>
